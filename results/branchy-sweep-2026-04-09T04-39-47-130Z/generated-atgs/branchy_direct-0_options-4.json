@@ -1,0 +1,86 @@
+{
+  "leader": "A",
+  "nodes": [
+    "A",
+    "D",
+    "B",
+    "X1",
+    "X2",
+    "X3",
+    "X4"
+  ],
+  "arcs": [
+    {
+      "id": "db",
+      "from": "D",
+      "to": "B",
+      "tam": "evm",
+      "fundId": "fund:db"
+    },
+    {
+      "id": "b_x1",
+      "from": "B",
+      "to": "X1",
+      "tam": "evm",
+      "fundId": "fund:bx1"
+    },
+    {
+      "id": "x1_a",
+      "from": "X1",
+      "to": "A",
+      "tam": "evm",
+      "fundId": "fund:x1a"
+    },
+    {
+      "id": "b_x2",
+      "from": "B",
+      "to": "X2",
+      "tam": "evm",
+      "fundId": "fund:bx2"
+    },
+    {
+      "id": "x2_a",
+      "from": "X2",
+      "to": "A",
+      "tam": "evm",
+      "fundId": "fund:x2a"
+    },
+    {
+      "id": "b_x3",
+      "from": "B",
+      "to": "X3",
+      "tam": "evm",
+      "fundId": "fund:bx3"
+    },
+    {
+      "id": "x3_a",
+      "from": "X3",
+      "to": "A",
+      "tam": "evm",
+      "fundId": "fund:x3a"
+    },
+    {
+      "id": "b_x4",
+      "from": "B",
+      "to": "X4",
+      "tam": "evm",
+      "fundId": "fund:bx4"
+    },
+    {
+      "id": "x4_a",
+      "from": "X4",
+      "to": "A",
+      "tam": "evm",
+      "fundId": "fund:x4a"
+    }
+  ],
+  "meta": {
+    "family": "branchy",
+    "parameters": {
+      "direct": false,
+      "options": 4
+    },
+    "expectedTargetPair": "D->B|evm|fund:db",
+    "expectedPattern": "single-level+multi-option"
+  }
+}

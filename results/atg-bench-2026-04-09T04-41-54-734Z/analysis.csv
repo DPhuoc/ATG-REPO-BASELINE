@@ -1,0 +1,7 @@
+pair,contract,levels,duplicateVector,pattern,bestClaimGas,worstClaimGas,refundGas,bestDisableGas,worstDisableGas,refundDisableGas,deployGasDecimal,okAll,notes
+"B->A|evm|fund:ba_direct","CTLCOnly","1","1","single-level","","","","","","","","false","best_claim and worst_claim are expected to match; pair compiles to CTLCOnly"
+"B->X1|evm|fund:bx1","CTLCOnly","1","1","single-level","","","","","","","","false","best_claim and worst_claim are expected to match; pair compiles to CTLCOnly"
+"B->X2|evm|fund:bx2","CTLCOnly","1","1","single-level","","","","","","","","false","best_claim and worst_claim are expected to match; pair compiles to CTLCOnly"
+"D->B|evm|fund:db","CTLCMultipleEdges","2","1|2","multi-level+multi-option","71629","128885","112464","","52925","52925","1400964","true","pair compiles to CTLCMultipleEdges; expect 1 disable step(s) before last claim/refund"
+"X1->A|evm|fund:x1a","CTLCOnly","1","1","single-level","","","","","","","","false","best_claim and worst_claim are expected to match; pair compiles to CTLCOnly"
+"X2->A|evm|fund:x2a","CTLCOnly","1","1","single-level","","","","","","","","false","best_claim and worst_claim are expected to match; pair compiles to CTLCOnly"

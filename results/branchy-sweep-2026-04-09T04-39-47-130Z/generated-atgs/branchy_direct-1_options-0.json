@@ -1,0 +1,33 @@
+{
+  "leader": "A",
+  "nodes": [
+    "A",
+    "D",
+    "B"
+  ],
+  "arcs": [
+    {
+      "id": "db",
+      "from": "D",
+      "to": "B",
+      "tam": "evm",
+      "fundId": "fund:db"
+    },
+    {
+      "id": "ba_direct",
+      "from": "B",
+      "to": "A",
+      "tam": "evm",
+      "fundId": "fund:ba_direct"
+    }
+  ],
+  "meta": {
+    "family": "branchy",
+    "parameters": {
+      "direct": true,
+      "options": 0
+    },
+    "expectedTargetPair": "D->B|evm|fund:db",
+    "expectedPattern": "single-level"
+  }
+}

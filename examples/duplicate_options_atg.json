@@ -1,0 +1,25 @@
+{
+  "leader": "A",
+  "nodes": ["A", "B", "C", "E", "D"],
+  "accountIndexByNode": {
+    "A": 1,
+    "B": 2,
+    "C": 3,
+    "E": 4,
+    "D": 5
+  },
+  "compiler": {
+    "startOffset": 6,
+    "delta": 1
+  },
+  "defaults": {
+    "defaultFundingWei": "1000000000000000000"
+  },
+  "arcs": [
+    { "id": "ca", "from": "C", "to": "A", "tam": "evm", "fundId": "fund:ca" },
+    { "id": "ea", "from": "E", "to": "A", "tam": "evm", "fundId": "fund:ea" },
+    { "id": "bc", "from": "B", "to": "C", "tam": "evm", "fundId": "fund:bc" },
+    { "id": "be", "from": "B", "to": "E", "tam": "evm", "fundId": "fund:be" },
+    { "id": "db", "from": "D", "to": "B", "tam": "evm", "fundId": "fund:db" }
+  ]
+}

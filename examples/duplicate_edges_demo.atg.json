@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "name": "duplicate_edges_demo",
+    "description": "E->D appears on two distinct paths to leader A, creating multiple options in one subcontract."
+  },
+  "leader": "A",
+  "participants": {
+    "A": { "accountIndex": 0 },
+    "B": { "accountIndex": 1 },
+    "C": { "accountIndex": 2 },
+    "D": { "accountIndex": 3 },
+    "E": { "accountIndex": 4 }
+  },
+  "timing": {
+    "t0": 3,
+    "delta": 1,
+    "deployGraceBlocks": 5
+  },
+  "arcs": [
+    {
+      "id": "e_BA",
+      "from": "B",
+      "to": "A",
+      "tam": "EVM",
+      "fundId": "ETH_DUP",
+      "amountWei": "50000000000000000"
+    },
+    {
+      "id": "e_CA",
+      "from": "C",
+      "to": "A",
+      "tam": "EVM",
+      "fundId": "ETH_DUP",
+      "amountWei": "50000000000000000"
+    },
+    {
+      "id": "e_DB",
+      "from": "D",
+      "to": "B",
+      "tam": "EVM",
+      "fundId": "ETH_DUP",
+      "amountWei": "50000000000000000"
+    },
+    {
+      "id": "e_DC",
+      "from": "D",
+      "to": "C",
+      "tam": "EVM",
+      "fundId": "ETH_DUP",
+      "amountWei": "50000000000000000"
+    },
+    {
+      "id": "e_ED",
+      "from": "E",
+      "to": "D",
+      "tam": "EVM",
+      "fundId": "ETH_DUP",
+      "amountWei": "50000000000000000"
+    }
+  ]
+}

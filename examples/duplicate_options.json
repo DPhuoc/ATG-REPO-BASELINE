@@ -1,0 +1,12 @@
+{
+  "name": "duplicate-options",
+  "leader": "D",
+  "nodes": ["A", "B", "C", "E", "D"],
+  "arcs": [
+    { "id": "a1", "from": "A", "to": "B", "tam": "ethereum", "fundId": "ETH:1", "amountEth": "0.5" },
+    { "id": "a2", "from": "B", "to": "C", "tam": "ethereum", "fundId": "ETH:1", "amountEth": "0.5" },
+    { "id": "a3", "from": "B", "to": "E", "tam": "ethereum", "fundId": "ETH:1", "amountEth": "0.5" },
+    { "id": "a4", "from": "C", "to": "D", "tam": "ethereum", "fundId": "ETH:1", "amountEth": "0.5" },
+    { "id": "a5", "from": "E", "to": "D", "tam": "ethereum", "fundId": "ETH:1", "amountEth": "0.5" }
+  ]
+}
