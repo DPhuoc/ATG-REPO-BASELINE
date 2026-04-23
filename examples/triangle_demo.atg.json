@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "name": "triangle_demo",
+    "description": "A simple ATG with leader A and three EVM transfers."
+  },
+  "leader": "A",
+  "participants": {
+    "A": { "accountIndex": 0 },
+    "B": { "accountIndex": 1 },
+    "C": { "accountIndex": 2 }
+  },
+  "timing": {
+    "t0": 3,
+    "delta": 1,
+    "deployGraceBlocks": 5
+  },
+  "arcs": [
+    {
+      "id": "e_BA",
+      "from": "B",
+      "to": "A",
+      "tam": "EVM",
+      "fundId": "ETH_DEMO",
+      "amountWei": "1000000000000000000"
+    },
+    {
+      "id": "e_CB",
+      "from": "C",
+      "to": "B",
+      "tam": "EVM",
+      "fundId": "ETH_DEMO",
+      "amountWei": "1000000000000000000"
+    },
+    {
+      "id": "e_CA",
+      "from": "C",
+      "to": "A",
+      "tam": "EVM",
+      "fundId": "ETH_DEMO",
+      "amountWei": "1000000000000000000"
+    }
+  ]
+}

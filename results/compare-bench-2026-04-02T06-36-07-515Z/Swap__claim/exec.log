@@ -1,0 +1,20 @@
+Using network 'development'.
+
+{
+  "ok": false,
+  "contract": "Swap",
+  "scenario": "claim",
+  "error": "invalid private key (argument=\"privateKey\", value=\"[REDACTED]\", code=INVALID_ARGUMENT, version=6.16.0)",
+  "stack": "TypeError: invalid private key (argument=\"privateKey\", value=\"[REDACTED]\", code=INVALID_ARGUMENT, version=6.16.0)\n    at makeError (/home/aothuatgiadp/blockchain/project/CTLC-Implementation/node_modules/ethers/src.ts/utils/errors.ts:691:21)\n    at assert (/home/aothuatgiadp/blockchain/project/CTLC-Implementation/node_modules/ethers/src.ts/utils/errors.ts:719:25)\n    at assertArgument (/home/aothuatgiadp/blockchain/project/CTLC-Implementation/node_modules/ethers/src.ts/utils/errors.ts:731:5)\n    at new SigningKey (/home/aothuatgiadp/blockchain/project/CTLC-Implementation/node_modules/ethers/src.ts/crypto/signing-key.ts:32:23)\n    at signDigest (/home/aothuatgiadp/blockchain/project/CTLC-Implementation/scripts/run_swap_case.js:89:15)\n    at nestedSigs (/home/aothuatgiadp/blockchain/project/CTLC-Implementation/scripts/run_swap_case.js:97:17)\n    at module.exports (/home/aothuatgiadp/blockchain/project/CTLC-Implementation/scripts/run_swap_case.js:152:22)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)"
+}
+TypeError: invalid private key (argument="privateKey", value="[REDACTED]", code=INVALID_ARGUMENT, version=6.16.0)
+    at makeError (/home/aothuatgiadp/blockchain/project/CTLC-Implementation/node_modules/ethers/src.ts/utils/errors.ts:691:21)
+    at assert (/home/aothuatgiadp/blockchain/project/CTLC-Implementation/node_modules/ethers/src.ts/utils/errors.ts:719:25)
+    at assertArgument (/home/aothuatgiadp/blockchain/project/CTLC-Implementation/node_modules/ethers/src.ts/utils/errors.ts:731:5)
+    at new SigningKey (/home/aothuatgiadp/blockchain/project/CTLC-Implementation/node_modules/ethers/src.ts/crypto/signing-key.ts:32:23)
+    at signDigest (/home/aothuatgiadp/blockchain/project/CTLC-Implementation/scripts/run_swap_case.js:89:15)
+    at nestedSigs (/home/aothuatgiadp/blockchain/project/CTLC-Implementation/scripts/run_swap_case.js:97:17)
+    at module.exports (/home/aothuatgiadp/blockchain/project/CTLC-Implementation/scripts/run_swap_case.js:152:22)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+Truffle v5.11.5 (core: 5.11.5)
+Node v18.20.8
