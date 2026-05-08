@@ -1,0 +1,45 @@
+COMMAND: python3 experiments/scale_trace/scripts/trace_result_json.py /home/aothuatgiadp/blockchain/project/CTLC-Implementation/experiments/scale_trace/runs/random_v1_74/B-_C_evm_fund_bc_CTLCMultipleEdges_refund/result.json /home/aothuatgiadp/blockchain/project/CTLC-Implementation/experiments/scale_trace/runs/random_v1_74/B-_C_evm_fund_bc_CTLCMultipleEdges_refund/trace.json
+STATUS: 0
+
+STDOUT:
+{
+  "graph_id": "",
+  "pair": "B->C|evm|fund:bc",
+  "contract": "CTLCMultipleEdges",
+  "scenario": "refund",
+  "contractAddress": "0x9946ACD34db8517f7d965Ff9eFb27a78C4D97156",
+  "traces": {
+    "deploy": {
+      "tx_hash": "0x7ce9ed9c113c5097036fd8d3ce26c4edfa6e5d9e5516bc6cbead0c6119526262",
+      "actual_calldata_bytes": 8297,
+      "actual_sstore_count": 26,
+      "actual_call_count": 0,
+      "opcode_steps": 3883
+    },
+    "fund": {
+      "tx_hash": "0xd094dcbbc8c98060b4615764f23bb80423141c6cb1fab5fb8d9ae7a40e8f904b",
+      "actual_calldata_bytes": 0,
+      "actual_sstore_count": 0,
+      "actual_call_count": 0,
+      "opcode_steps": 13
+    },
+    "disable_level0": {
+      "tx_hash": "0x1c61c769e22f1a9dde0405843f6118f58c0da4923705fa5844df3da559194990",
+      "actual_calldata_bytes": 36,
+      "actual_sstore_count": 1,
+      "actual_call_count": 0,
+      "opcode_steps": 300
+    },
+    "refund_level1": {
+      "tx_hash": "0xa975239f43b828a93cc239e17955432f1161f6c3e99133c11d9a443fbd4a2bf9",
+      "actual_calldata_bytes": 4,
+      "actual_sstore_count": 1,
+      "actual_call_count": 1,
+      "opcode_steps": 224
+    }
+  }
+}
+
+
+STDERR:
+

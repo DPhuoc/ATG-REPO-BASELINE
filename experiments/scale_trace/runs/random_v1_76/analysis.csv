@@ -1,0 +1,12 @@
+pair,contract,levels,duplicateVector,pattern,bestClaimGas,worstClaimGas,refundGas,bestDisableGas,worstDisableGas,refundDisableGas,deployGasDecimal,okAll,notes
+"B->C|evm|fund:bc","CTLCMultipleEdges","3","1|2|2","multi-level+multi-option","71641","173360","148301","","88762","88762","1769181","true","pair compiles to CTLCMultipleEdges; expect 2 disable step(s) before last claim/refund"
+"C->A|evm|fund:ca","CTLCOnly","1","1","single-level","64620","64620","59561","","0","0","1100963","true","best_claim and worst_claim are expected to match; pair compiles to CTLCOnly"
+"C->D|evm|fund:cd","CTLCMultipleEdges","1","2","single-level+multi-option","80267","80267","59539","","0","0","1331110","true","best_claim and worst_claim are expected to match; pair compiles to CTLCMultipleEdges"
+"C->E|evm|fund:ce","CTLCMultipleEdges","1","2","single-level+multi-option","75948","75948","59539","","0","0","1285274","true","best_claim and worst_claim are expected to match; pair compiles to CTLCMultipleEdges"
+"D->B|evm|fund:db","CTLCMultipleEdges","2","1|2","multi-level+multi-option","75948","137535","112464","","52925","52925","1515536","true","pair compiles to CTLCMultipleEdges; expect 1 disable step(s) before last claim/refund"
+"D->C|evm|fund:dc","CTLCMultipleEdges","2","1|2","multi-level+multi-option","71641","133180","112464","","52925","52925","1446740","true","pair compiles to CTLCMultipleEdges; expect 1 disable step(s) before last claim/refund"
+"D->E|evm|fund:de","CTLCMultipleEdges","1","4","single-level+multi-option","75948","75948","59539","","0","0","1469596","true","best_claim and worst_claim are expected to match; pair compiles to CTLCMultipleEdges"
+"E->C|evm|fund:ec","CTLCOnly","1","1","single-level","68747","68747","59561","","0","0","1123899","true","best_claim and worst_claim are expected to match; pair compiles to CTLCOnly"
+"E->D|evm|fund:ed","CTLCOnly","2","1|1","multi-level","72874","129972","112508","","52947","52947","1284894","true","pair compiles to CTLCOnly; expect 1 disable step(s) before last claim/refund"
+"E->F|evm|fund:ef","CTLCOnly","1","1","single-level","68735","68735","59561","","0","0","1123899","true","best_claim and worst_claim are expected to match; pair compiles to CTLCOnly"
+"F->A|evm|fund:fa","CTLCOnly","1","1","single-level","64620","64620","59561","","0","0","1100987","true","best_claim and worst_claim are expected to match; pair compiles to CTLCOnly"

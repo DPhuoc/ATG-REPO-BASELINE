@@ -1,0 +1,59 @@
+COMMAND: python3 experiments/scale_trace/scripts/trace_result_json.py /home/aothuatgiadp/blockchain/project/CTLC-Implementation/experiments/scale_trace/runs/random_v1_18/D-_E_evm_fund_de_CTLCOnly_refund/result.json /home/aothuatgiadp/blockchain/project/CTLC-Implementation/experiments/scale_trace/runs/random_v1_18/D-_E_evm_fund_de_CTLCOnly_refund/trace.json
+STATUS: 0
+
+STDOUT:
+{
+  "graph_id": "",
+  "pair": "D->E|evm|fund:de",
+  "contract": "CTLCOnly",
+  "scenario": "refund",
+  "contractAddress": "0xD4B4343e4920fa00E075AF49302121c2e988a282",
+  "traces": {
+    "deploy": {
+      "tx_hash": "0x52c0f47b060617528f1a149d1c3aa6d29c57fca75e97fd998c98b6238be4b583",
+      "actual_calldata_bytes": 7923,
+      "actual_sstore_count": 31,
+      "actual_call_count": 0,
+      "opcode_steps": 4396
+    },
+    "fund": {
+      "tx_hash": "0x0a95b9bf1f97bf503e55977834ba4a7abdafc194a43d865ae1a98c46818a3302",
+      "actual_calldata_bytes": 0,
+      "actual_sstore_count": 0,
+      "actual_call_count": 0,
+      "opcode_steps": 13
+    },
+    "disable_level0": {
+      "tx_hash": "0x2721ecf3ed7a74242a04f6ca454721736503466e51def837c67cc65faac3534a",
+      "actual_calldata_bytes": 36,
+      "actual_sstore_count": 1,
+      "actual_call_count": 0,
+      "opcode_steps": 305
+    },
+    "disable_level1": {
+      "tx_hash": "0x1a8f7ad6f20c9b7fbef27fba68424364469227c22e37e155e381a14bf841ef9f",
+      "actual_calldata_bytes": 36,
+      "actual_sstore_count": 1,
+      "actual_call_count": 0,
+      "opcode_steps": 305
+    },
+    "disable_level2": {
+      "tx_hash": "0x5cc5086321a20053b46efd2ee6df9323b18b4565c388d45d7a364d9f2f4c7388",
+      "actual_calldata_bytes": 36,
+      "actual_sstore_count": 1,
+      "actual_call_count": 0,
+      "opcode_steps": 305
+    },
+    "refund_level3": {
+      "tx_hash": "0x84a08c61f2986cd73f3167cc10f6dd4b6b5b0b3db3ba4f1e9a1ce577f2c0cca8",
+      "actual_calldata_bytes": 4,
+      "actual_sstore_count": 1,
+      "actual_call_count": 1,
+      "opcode_steps": 229
+    }
+  }
+}
+
+
+STDERR:
+

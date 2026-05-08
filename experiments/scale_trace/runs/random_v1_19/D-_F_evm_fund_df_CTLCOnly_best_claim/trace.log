@@ -1,0 +1,38 @@
+COMMAND: python3 experiments/scale_trace/scripts/trace_result_json.py /home/aothuatgiadp/blockchain/project/CTLC-Implementation/experiments/scale_trace/runs/random_v1_19/D-_F_evm_fund_df_CTLCOnly_best_claim/result.json /home/aothuatgiadp/blockchain/project/CTLC-Implementation/experiments/scale_trace/runs/random_v1_19/D-_F_evm_fund_df_CTLCOnly_best_claim/trace.json
+STATUS: 0
+
+STDOUT:
+{
+  "graph_id": "",
+  "pair": "D->F|evm|fund:df",
+  "contract": "CTLCOnly",
+  "scenario": "best_claim",
+  "contractAddress": "0x7E17cD9805Ca62826d80E2e1b1fe7D6Ba1084DD9",
+  "traces": {
+    "deploy": {
+      "tx_hash": "0xfe356c7480b206285cc7a04edb7e1eeffc7090f86a9e83c53ac1c19dcdd0db31",
+      "actual_calldata_bytes": 7123,
+      "actual_sstore_count": 9,
+      "actual_call_count": 0,
+      "opcode_steps": 1374
+    },
+    "fund": {
+      "tx_hash": "0xad406d88887e9b3fe97a5b22738c0dfb61629b2af5e3e0c5367fa5513d86a985",
+      "actual_calldata_bytes": 0,
+      "actual_sstore_count": 0,
+      "actual_call_count": 0,
+      "opcode_steps": 13
+    },
+    "claim_level0": {
+      "tx_hash": "0x4fa2df32f01346c2a376bbff16eaf317e9365c06be2c401c7516e26ae8809b9a",
+      "actual_calldata_bytes": 292,
+      "actual_sstore_count": 1,
+      "actual_call_count": 1,
+      "opcode_steps": 1134
+    }
+  }
+}
+
+
+STDERR:
+

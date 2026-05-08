@@ -1,0 +1,11 @@
+pair,contract,levels,duplicateVector,pattern,bestClaimGas,worstClaimGas,refundGas,bestDisableGas,worstDisableGas,refundDisableGas,deployGasDecimal,okAll,notes
+"B->A|evm|fund:ba","CTLCOnly","1","1","single-level","64620","64620","59561","","0","0","1100987","true","best_claim and worst_claim are expected to match; pair compiles to CTLCOnly"
+"B->C|evm|fund:bc","CTLCMultipleEdges","3","1|2|2","multi-level+multi-option","71641","173372","148301","","88762","88762","1723369","true","pair compiles to CTLCMultipleEdges; expect 2 disable step(s) before last claim/refund"
+"B->D|evm|fund:bd","CTLCOnly","2","1|1","multi-level","68747","129972","112508","","52947","52947","1261994","true","pair compiles to CTLCOnly; expect 1 disable step(s) before last claim/refund"
+"C->A|evm|fund:ca","CTLCOnly","1","1","single-level","64620","64620","59561","","0","0","1100987","true","best_claim and worst_claim are expected to match; pair compiles to CTLCOnly"
+"C->D|evm|fund:cd","CTLCMultipleEdges","3","2|2|2","multi-level+multi-option","71641","173372","148301","","88762","88762","1838448","true","pair compiles to CTLCMultipleEdges; expect 2 disable step(s) before last claim/refund"
+"D->A|evm|fund:da","CTLCOnly","1","1","single-level","64620","64620","59561","","0","0","1100987","true","best_claim and worst_claim are expected to match; pair compiles to CTLCOnly"
+"D->E|evm|fund:de","CTLCOnly","3","1|1|1","multi-level","72874","169970","148367","","88806","88806","1445925","true","pair compiles to CTLCOnly; expect 2 disable step(s) before last claim/refund"
+"E->F|evm|fund:ef","CTLCMultipleEdges","4","1|1|2|2","multi-level+multi-option","71629","209209","184138","","124599","124599","1907843","true","pair compiles to CTLCMultipleEdges; expect 3 disable step(s) before last claim/refund"
+"F->A|evm|fund:fa","CTLCOnly","1","1","single-level","64620","64620","59561","","0","0","1100987","true","best_claim and worst_claim are expected to match; pair compiles to CTLCOnly"
+"F->B|evm|fund:fb","CTLCMultipleEdges","3","1|2|2","multi-level+multi-option","71641","169041","148301","","88762","88762","1677557","true","pair compiles to CTLCMultipleEdges; expect 2 disable step(s) before last claim/refund"

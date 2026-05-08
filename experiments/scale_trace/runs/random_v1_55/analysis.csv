@@ -1,0 +1,12 @@
+pair,contract,levels,duplicateVector,pattern,bestClaimGas,worstClaimGas,refundGas,bestDisableGas,worstDisableGas,refundDisableGas,deployGasDecimal,okAll,notes
+"B->C|evm|fund:bc","CTLCOnly","3","1|1|1","multi-level","77013","174110","148367","","88806","88806","1514637","true","pair compiles to CTLCOnly; expect 2 disable step(s) before last claim/refund"
+"B->D|evm|fund:bd","CTLCOnly","3","1|1|1","multi-level","72874","169958","148367","","88806","88806","1445913","true","pair compiles to CTLCOnly; expect 2 disable step(s) before last claim/refund"
+"C->D|evm|fund:cd","CTLCOnly","3","1|1|1","multi-level","72874","169982","148367","","88806","88806","1445925","true","pair compiles to CTLCOnly; expect 2 disable step(s) before last claim/refund"
+"D->E|evm|fund:de","CTLCOnly","1","1","single-level","77001","77001","59561","","0","0","1169723","true","best_claim and worst_claim are expected to match; pair compiles to CTLCOnly"
+"D->F|evm|fund:df","CTLCOnly","1","1","single-level","72874","72874","59561","","0","0","1146811","true","best_claim and worst_claim are expected to match; pair compiles to CTLCOnly"
+"D->G|evm|fund:dg","CTLCOnly","1","1","single-level","68735","68735","59561","","0","0","1123899","true","best_claim and worst_claim are expected to match; pair compiles to CTLCOnly"
+"E->C|evm|fund:ec","CTLCOnly","2","1|1","multi-level","77013","134123","112508","","52947","52947","1330730","true","pair compiles to CTLCOnly; expect 1 disable step(s) before last claim/refund"
+"E->D|evm|fund:ed","CTLCOnly","2","1|1","multi-level","72862","129960","112508","","52947","52947","1284906","true","pair compiles to CTLCOnly; expect 1 disable step(s) before last claim/refund"
+"E->F|evm|fund:ef","CTLCOnly","1","1","single-level","72862","72862","59561","","0","0","1146811","true","best_claim and worst_claim are expected to match; pair compiles to CTLCOnly"
+"F->G|evm|fund:fg","CTLCOnly","1","1","single-level","68747","68747","59561","","0","0","1123899","true","best_claim and worst_claim are expected to match; pair compiles to CTLCOnly"
+"G->A|evm|fund:ga","CTLCOnly","1","1","single-level","64620","64620","59561","","0","0","1100975","true","best_claim and worst_claim are expected to match; pair compiles to CTLCOnly"

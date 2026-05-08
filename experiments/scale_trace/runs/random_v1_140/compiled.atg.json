@@ -1,0 +1,753 @@
+{
+  "schemaVersion": 1,
+  "leader": "A",
+  "defaults": {
+    "delta": 1,
+    "startOffset": 5,
+    "defaultFundingWei": "1000000000000000000"
+  },
+  "accountIndexByNode": {
+    "A": 1,
+    "B": 2,
+    "C": 3,
+    "D": 4,
+    "E": 5
+  },
+  "xedges": [
+    {
+      "xedgeId": "xe_0",
+      "ordinal": 0,
+      "arcId": "e4",
+      "from": "E",
+      "to": "A",
+      "tam": "evm",
+      "fundId": "fund:ea",
+      "level": 1,
+      "pathToRootXEdgeIds": [
+        "xe_0"
+      ],
+      "pathToRootArcIds": [
+        "e4"
+      ],
+      "sourcePathNodes": [
+        "E",
+        "A"
+      ]
+    },
+    {
+      "xedgeId": "xe_1",
+      "ordinal": 1,
+      "arcId": "e5",
+      "from": "E",
+      "to": "A",
+      "tam": "evm",
+      "fundId": "fund:ea",
+      "level": 1,
+      "pathToRootXEdgeIds": [
+        "xe_1"
+      ],
+      "pathToRootArcIds": [
+        "e5"
+      ],
+      "sourcePathNodes": [
+        "E",
+        "A"
+      ]
+    },
+    {
+      "xedgeId": "xe_2",
+      "ordinal": 2,
+      "arcId": "e11",
+      "from": "B",
+      "to": "A",
+      "tam": "evm",
+      "fundId": "fund:ba",
+      "level": 1,
+      "pathToRootXEdgeIds": [
+        "xe_2"
+      ],
+      "pathToRootArcIds": [
+        "e11"
+      ],
+      "sourcePathNodes": [
+        "B",
+        "A"
+      ]
+    },
+    {
+      "xedgeId": "xe_3",
+      "ordinal": 3,
+      "arcId": "e3",
+      "from": "D",
+      "to": "E",
+      "tam": "evm",
+      "fundId": "fund:de",
+      "level": 2,
+      "pathToRootXEdgeIds": [
+        "xe_3",
+        "xe_1"
+      ],
+      "pathToRootArcIds": [
+        "e3",
+        "e5"
+      ],
+      "sourcePathNodes": [
+        "D",
+        "E",
+        "A"
+      ]
+    },
+    {
+      "xedgeId": "xe_4",
+      "ordinal": 4,
+      "arcId": "e8",
+      "from": "B",
+      "to": "E",
+      "tam": "evm",
+      "fundId": "fund:be",
+      "level": 2,
+      "pathToRootXEdgeIds": [
+        "xe_4",
+        "xe_1"
+      ],
+      "pathToRootArcIds": [
+        "e8",
+        "e5"
+      ],
+      "sourcePathNodes": [
+        "B",
+        "E",
+        "A"
+      ]
+    },
+    {
+      "xedgeId": "xe_5",
+      "ordinal": 5,
+      "arcId": "e2",
+      "from": "C",
+      "to": "D",
+      "tam": "evm",
+      "fundId": "fund:cd",
+      "level": 3,
+      "pathToRootXEdgeIds": [
+        "xe_5",
+        "xe_3",
+        "xe_1"
+      ],
+      "pathToRootArcIds": [
+        "e2",
+        "e3",
+        "e5"
+      ],
+      "sourcePathNodes": [
+        "C",
+        "D",
+        "E",
+        "A"
+      ]
+    },
+    {
+      "xedgeId": "xe_6",
+      "ordinal": 6,
+      "arcId": "e1",
+      "from": "B",
+      "to": "C",
+      "tam": "evm",
+      "fundId": "fund:bc",
+      "level": 4,
+      "pathToRootXEdgeIds": [
+        "xe_6",
+        "xe_5",
+        "xe_3",
+        "xe_1"
+      ],
+      "pathToRootArcIds": [
+        "e1",
+        "e2",
+        "e3",
+        "e5"
+      ],
+      "sourcePathNodes": [
+        "B",
+        "C",
+        "D",
+        "E",
+        "A"
+      ]
+    },
+    {
+      "xedgeId": "xe_7",
+      "ordinal": 7,
+      "arcId": "e6",
+      "from": "B",
+      "to": "C",
+      "tam": "evm",
+      "fundId": "fund:bc",
+      "level": 4,
+      "pathToRootXEdgeIds": [
+        "xe_7",
+        "xe_5",
+        "xe_3",
+        "xe_1"
+      ],
+      "pathToRootArcIds": [
+        "e6",
+        "e2",
+        "e3",
+        "e5"
+      ],
+      "sourcePathNodes": [
+        "B",
+        "C",
+        "D",
+        "E",
+        "A"
+      ]
+    },
+    {
+      "xedgeId": "xe_8",
+      "ordinal": 8,
+      "arcId": "e3",
+      "from": "D",
+      "to": "E",
+      "tam": "evm",
+      "fundId": "fund:de",
+      "level": 2,
+      "pathToRootXEdgeIds": [
+        "xe_8",
+        "xe_0"
+      ],
+      "pathToRootArcIds": [
+        "e3",
+        "e4"
+      ],
+      "sourcePathNodes": [
+        "D",
+        "E",
+        "A"
+      ]
+    },
+    {
+      "xedgeId": "xe_9",
+      "ordinal": 9,
+      "arcId": "e8",
+      "from": "B",
+      "to": "E",
+      "tam": "evm",
+      "fundId": "fund:be",
+      "level": 2,
+      "pathToRootXEdgeIds": [
+        "xe_9",
+        "xe_0"
+      ],
+      "pathToRootArcIds": [
+        "e8",
+        "e4"
+      ],
+      "sourcePathNodes": [
+        "B",
+        "E",
+        "A"
+      ]
+    },
+    {
+      "xedgeId": "xe_10",
+      "ordinal": 10,
+      "arcId": "e2",
+      "from": "C",
+      "to": "D",
+      "tam": "evm",
+      "fundId": "fund:cd",
+      "level": 3,
+      "pathToRootXEdgeIds": [
+        "xe_10",
+        "xe_8",
+        "xe_0"
+      ],
+      "pathToRootArcIds": [
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "sourcePathNodes": [
+        "C",
+        "D",
+        "E",
+        "A"
+      ]
+    },
+    {
+      "xedgeId": "xe_11",
+      "ordinal": 11,
+      "arcId": "e1",
+      "from": "B",
+      "to": "C",
+      "tam": "evm",
+      "fundId": "fund:bc",
+      "level": 4,
+      "pathToRootXEdgeIds": [
+        "xe_11",
+        "xe_10",
+        "xe_8",
+        "xe_0"
+      ],
+      "pathToRootArcIds": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "sourcePathNodes": [
+        "B",
+        "C",
+        "D",
+        "E",
+        "A"
+      ]
+    },
+    {
+      "xedgeId": "xe_12",
+      "ordinal": 12,
+      "arcId": "e6",
+      "from": "B",
+      "to": "C",
+      "tam": "evm",
+      "fundId": "fund:bc",
+      "level": 4,
+      "pathToRootXEdgeIds": [
+        "xe_12",
+        "xe_10",
+        "xe_8",
+        "xe_0"
+      ],
+      "pathToRootArcIds": [
+        "e6",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "sourcePathNodes": [
+        "B",
+        "C",
+        "D",
+        "E",
+        "A"
+      ]
+    }
+  ],
+  "contracts": [
+    {
+      "key": "B->A|evm|fund:ba",
+      "contractName": "CTLCOnly",
+      "partyNode": "B",
+      "counterpartyNode": "A",
+      "partyAccountIndex": 2,
+      "counterpartyAccountIndex": 1,
+      "tam": "evm",
+      "fundId": "fund:ba",
+      "fundingWei": "1000000000000000000",
+      "relativeTimelocks": [
+        6
+      ],
+      "conditions": [
+        [
+          "0x4e05623678d9926eb7b17c85772b72f4d63a8bd4eea0553785b46b709000e665"
+        ]
+      ],
+      "subcontracts": [
+        {
+          "level": 1,
+          "relativeTimelock": 6,
+          "optionSecretLabels": [
+            [
+              "secret:xe_2"
+            ]
+          ],
+          "optionHashlocks": [
+            [
+              "0x4e05623678d9926eb7b17c85772b72f4d63a8bd4eea0553785b46b709000e665"
+            ]
+          ],
+          "duplicateCount": 1
+        }
+      ],
+      "secretsByLabel": {
+        "secret:xe_2": "0x2d9b0ad8642aa1d91bc87b690f251e3c"
+      },
+      "xedgeIds": [
+        "xe_2"
+      ]
+    },
+    {
+      "key": "B->C|evm|fund:bc",
+      "contractName": "CTLCMultipleEdges",
+      "partyNode": "B",
+      "counterpartyNode": "C",
+      "partyAccountIndex": 2,
+      "counterpartyAccountIndex": 3,
+      "tam": "evm",
+      "fundId": "fund:bc",
+      "fundingWei": "1000000000000000000",
+      "relativeTimelocks": [
+        9
+      ],
+      "conditions": [
+        [
+          [
+            "0x2ed1c937b4c1fc5cbf26300fce64fe057b694cf06cf00ab4339f6d8e21b912bc",
+            "0xf13e2ba19f6ea56ed56537e484c65c5860a4d69671b4ef6d1d65dfbf7b594fa0",
+            "0xf1d9af04b3e1fa5c3bce44d1c3ee70763c90c7ef3d0a76d242784adffb3aa576",
+            "0x30ddc51bde0a047a71597dd0f119c435b00e85649de952b29590b2ac6693ea66"
+          ],
+          [
+            "0xd4631568db989752272ad4062809e206085f5cc6c5b96c24f80af77cad4a288d",
+            "0xf13e2ba19f6ea56ed56537e484c65c5860a4d69671b4ef6d1d65dfbf7b594fa0",
+            "0xf1d9af04b3e1fa5c3bce44d1c3ee70763c90c7ef3d0a76d242784adffb3aa576",
+            "0x30ddc51bde0a047a71597dd0f119c435b00e85649de952b29590b2ac6693ea66"
+          ],
+          [
+            "0x5c2559e00660e3d18fb889c86f0d456312209779f18f38ba96d40828c9e2e2c5",
+            "0x1833843d372bf040c23260811c30c083ee18f9c823d9da2b421a14bf2144bed3",
+            "0x2fff742130e653171fef86877f9af69f6da8dfd2c6d4f6bab365e4bea6faf1ae",
+            "0x503febbd62a365da635fcf6227843a1b65305d44d03a249d222c6abcd5092388"
+          ],
+          [
+            "0x247716eea8f33dbd5104a620c4b8d575bbaf524253d9f5f4fd44566d3d5f6dd1",
+            "0x1833843d372bf040c23260811c30c083ee18f9c823d9da2b421a14bf2144bed3",
+            "0x2fff742130e653171fef86877f9af69f6da8dfd2c6d4f6bab365e4bea6faf1ae",
+            "0x503febbd62a365da635fcf6227843a1b65305d44d03a249d222c6abcd5092388"
+          ]
+        ]
+      ],
+      "subcontracts": [
+        {
+          "level": 4,
+          "relativeTimelock": 9,
+          "optionSecretLabels": [
+            [
+              "secret:xe_6",
+              "secret:xe_5",
+              "secret:xe_3",
+              "secret:xe_1"
+            ],
+            [
+              "secret:xe_7",
+              "secret:xe_5",
+              "secret:xe_3",
+              "secret:xe_1"
+            ],
+            [
+              "secret:xe_11",
+              "secret:xe_10",
+              "secret:xe_8",
+              "secret:xe_0"
+            ],
+            [
+              "secret:xe_12",
+              "secret:xe_10",
+              "secret:xe_8",
+              "secret:xe_0"
+            ]
+          ],
+          "optionHashlocks": [
+            [
+              "0x2ed1c937b4c1fc5cbf26300fce64fe057b694cf06cf00ab4339f6d8e21b912bc",
+              "0xf13e2ba19f6ea56ed56537e484c65c5860a4d69671b4ef6d1d65dfbf7b594fa0",
+              "0xf1d9af04b3e1fa5c3bce44d1c3ee70763c90c7ef3d0a76d242784adffb3aa576",
+              "0x30ddc51bde0a047a71597dd0f119c435b00e85649de952b29590b2ac6693ea66"
+            ],
+            [
+              "0xd4631568db989752272ad4062809e206085f5cc6c5b96c24f80af77cad4a288d",
+              "0xf13e2ba19f6ea56ed56537e484c65c5860a4d69671b4ef6d1d65dfbf7b594fa0",
+              "0xf1d9af04b3e1fa5c3bce44d1c3ee70763c90c7ef3d0a76d242784adffb3aa576",
+              "0x30ddc51bde0a047a71597dd0f119c435b00e85649de952b29590b2ac6693ea66"
+            ],
+            [
+              "0x5c2559e00660e3d18fb889c86f0d456312209779f18f38ba96d40828c9e2e2c5",
+              "0x1833843d372bf040c23260811c30c083ee18f9c823d9da2b421a14bf2144bed3",
+              "0x2fff742130e653171fef86877f9af69f6da8dfd2c6d4f6bab365e4bea6faf1ae",
+              "0x503febbd62a365da635fcf6227843a1b65305d44d03a249d222c6abcd5092388"
+            ],
+            [
+              "0x247716eea8f33dbd5104a620c4b8d575bbaf524253d9f5f4fd44566d3d5f6dd1",
+              "0x1833843d372bf040c23260811c30c083ee18f9c823d9da2b421a14bf2144bed3",
+              "0x2fff742130e653171fef86877f9af69f6da8dfd2c6d4f6bab365e4bea6faf1ae",
+              "0x503febbd62a365da635fcf6227843a1b65305d44d03a249d222c6abcd5092388"
+            ]
+          ],
+          "duplicateCount": 4
+        }
+      ],
+      "secretsByLabel": {
+        "secret:xe_6": "0xa8c730e9dc57e5fdcaa805c0ab500b71",
+        "secret:xe_5": "0x4dc2b8f98ab0e89f254af2b488d9447f",
+        "secret:xe_3": "0xad2487b2c5b66af777600a082af6c39d",
+        "secret:xe_1": "0x5ec55fdcea233bbf3608ede43a03ddec",
+        "secret:xe_7": "0x1c34cb5ca6cde809e64ef124edbda422",
+        "secret:xe_11": "0xa8ad81c7ae0e0366da3e3164ee8f3b4e",
+        "secret:xe_10": "0xe6d38523c9933d70bca0c7cd4310a1da",
+        "secret:xe_8": "0xfc447dc91fdd76235105ca24e609a9a0",
+        "secret:xe_0": "0xaad7434f5d0d6711fd497ab6e42c9bd7",
+        "secret:xe_12": "0xf504607c1b6919574dcdc06ff2ad5f2d"
+      },
+      "xedgeIds": [
+        "xe_6",
+        "xe_7",
+        "xe_11",
+        "xe_12"
+      ]
+    },
+    {
+      "key": "B->E|evm|fund:be",
+      "contractName": "CTLCMultipleEdges",
+      "partyNode": "B",
+      "counterpartyNode": "E",
+      "partyAccountIndex": 2,
+      "counterpartyAccountIndex": 5,
+      "tam": "evm",
+      "fundId": "fund:be",
+      "fundingWei": "1000000000000000000",
+      "relativeTimelocks": [
+        7
+      ],
+      "conditions": [
+        [
+          [
+            "0xc5f6cf9a5be2d31d00b8a57882e3d7ea6a7ecf871d4b73e106df6b3438233fd4",
+            "0x93c828d006394fa4fec0990b62bb89f5708af30156d472afe388258b26f6d93f"
+          ],
+          [
+            "0x0e19abb26f9151c2f11088f7196b2e71f42f1d376e7d358c4ccf317b654d6105",
+            "0xed754d96e9a55ece977bf47e73cec6327355fdf6ee89ce6a24905b73831c4563"
+          ]
+        ]
+      ],
+      "subcontracts": [
+        {
+          "level": 2,
+          "relativeTimelock": 7,
+          "optionSecretLabels": [
+            [
+              "secret:xe_4",
+              "secret:xe_1"
+            ],
+            [
+              "secret:xe_9",
+              "secret:xe_0"
+            ]
+          ],
+          "optionHashlocks": [
+            [
+              "0xc5f6cf9a5be2d31d00b8a57882e3d7ea6a7ecf871d4b73e106df6b3438233fd4",
+              "0x93c828d006394fa4fec0990b62bb89f5708af30156d472afe388258b26f6d93f"
+            ],
+            [
+              "0x0e19abb26f9151c2f11088f7196b2e71f42f1d376e7d358c4ccf317b654d6105",
+              "0xed754d96e9a55ece977bf47e73cec6327355fdf6ee89ce6a24905b73831c4563"
+            ]
+          ],
+          "duplicateCount": 2
+        }
+      ],
+      "secretsByLabel": {
+        "secret:xe_4": "0x559d68a78ab329dc55a71ab6df624310",
+        "secret:xe_1": "0xecca578d411c7bf54b1913ba3b8ee89a",
+        "secret:xe_9": "0xe331bd6f88d26f2b32597117a1864135",
+        "secret:xe_0": "0x85560b18817016552886b63cdfdb77a1"
+      },
+      "xedgeIds": [
+        "xe_4",
+        "xe_9"
+      ]
+    },
+    {
+      "key": "C->D|evm|fund:cd",
+      "contractName": "CTLCMultipleEdges",
+      "partyNode": "C",
+      "counterpartyNode": "D",
+      "partyAccountIndex": 3,
+      "counterpartyAccountIndex": 4,
+      "tam": "evm",
+      "fundId": "fund:cd",
+      "fundingWei": "1000000000000000000",
+      "relativeTimelocks": [
+        8
+      ],
+      "conditions": [
+        [
+          [
+            "0x024d4ad2cb3374a07822dbd968f9f0c26caa0984b5ba795600a8511015fdd1c1",
+            "0x68a17e267ef7b59efa58fd412b54e114fe658ef4121464de979f1795a1cbd00d",
+            "0x6104ecfc463fe05e4c561de692f5ce73d807ef8907536b2e15e97401699a62d6"
+          ],
+          [
+            "0xcc4c5fadf4193aaac220988d230db9237059458a1e2a076dd2c7d80c068b6f1e",
+            "0x03139072e607697167c6041f7e969c27cf49e16c78b2531b1b79410f5211613b",
+            "0x53c1c5a0c5e649436868ba2312521c263471b9895af4f58a84b544a234d04e6c"
+          ]
+        ]
+      ],
+      "subcontracts": [
+        {
+          "level": 3,
+          "relativeTimelock": 8,
+          "optionSecretLabels": [
+            [
+              "secret:xe_5",
+              "secret:xe_3",
+              "secret:xe_1"
+            ],
+            [
+              "secret:xe_10",
+              "secret:xe_8",
+              "secret:xe_0"
+            ]
+          ],
+          "optionHashlocks": [
+            [
+              "0x024d4ad2cb3374a07822dbd968f9f0c26caa0984b5ba795600a8511015fdd1c1",
+              "0x68a17e267ef7b59efa58fd412b54e114fe658ef4121464de979f1795a1cbd00d",
+              "0x6104ecfc463fe05e4c561de692f5ce73d807ef8907536b2e15e97401699a62d6"
+            ],
+            [
+              "0xcc4c5fadf4193aaac220988d230db9237059458a1e2a076dd2c7d80c068b6f1e",
+              "0x03139072e607697167c6041f7e969c27cf49e16c78b2531b1b79410f5211613b",
+              "0x53c1c5a0c5e649436868ba2312521c263471b9895af4f58a84b544a234d04e6c"
+            ]
+          ],
+          "duplicateCount": 2
+        }
+      ],
+      "secretsByLabel": {
+        "secret:xe_5": "0xeb16ec8742c25af7f0849656696399bd",
+        "secret:xe_3": "0x7d17f6f4087e0b9c1e5da13fc2bb28c5",
+        "secret:xe_1": "0x68593853cbe1d7aa67eadce27837d8ea",
+        "secret:xe_10": "0xf4c5b9b6faed85ceaed60c249f8c7c37",
+        "secret:xe_8": "0x9eb1d738f515deff9b28076af47064c6",
+        "secret:xe_0": "0x9414b48987925c355595a1b557de9355"
+      },
+      "xedgeIds": [
+        "xe_5",
+        "xe_10"
+      ]
+    },
+    {
+      "key": "D->E|evm|fund:de",
+      "contractName": "CTLCMultipleEdges",
+      "partyNode": "D",
+      "counterpartyNode": "E",
+      "partyAccountIndex": 4,
+      "counterpartyAccountIndex": 5,
+      "tam": "evm",
+      "fundId": "fund:de",
+      "fundingWei": "1000000000000000000",
+      "relativeTimelocks": [
+        7
+      ],
+      "conditions": [
+        [
+          [
+            "0x3be98c96f2e74129ddbc63123bc9926a5831da92189f2b616de546c9b7e4fdf8",
+            "0xc585dc96ba291aa990110c7850b49bef42eeb00aceadb73dc1204ce6cc494fa8"
+          ],
+          [
+            "0x8cd6238e8b47ed3ec0dca87d5c7c579a833807f256985bfdb9900c59d5191f04",
+            "0x91130a0b31ff076a0c9a85c30ed543212ef3408293dafc1a3b2980fa340c90ff"
+          ]
+        ]
+      ],
+      "subcontracts": [
+        {
+          "level": 2,
+          "relativeTimelock": 7,
+          "optionSecretLabels": [
+            [
+              "secret:xe_3",
+              "secret:xe_1"
+            ],
+            [
+              "secret:xe_8",
+              "secret:xe_0"
+            ]
+          ],
+          "optionHashlocks": [
+            [
+              "0x3be98c96f2e74129ddbc63123bc9926a5831da92189f2b616de546c9b7e4fdf8",
+              "0xc585dc96ba291aa990110c7850b49bef42eeb00aceadb73dc1204ce6cc494fa8"
+            ],
+            [
+              "0x8cd6238e8b47ed3ec0dca87d5c7c579a833807f256985bfdb9900c59d5191f04",
+              "0x91130a0b31ff076a0c9a85c30ed543212ef3408293dafc1a3b2980fa340c90ff"
+            ]
+          ],
+          "duplicateCount": 2
+        }
+      ],
+      "secretsByLabel": {
+        "secret:xe_3": "0x22ec0a8e7b3ed58276484ee72e70e91f",
+        "secret:xe_1": "0x1383465af3850819a4b5b5231ca95943",
+        "secret:xe_8": "0x37c8284f869762006c84e71024912071",
+        "secret:xe_0": "0xce02621b9349f225866c90aabd72367b"
+      },
+      "xedgeIds": [
+        "xe_3",
+        "xe_8"
+      ]
+    },
+    {
+      "key": "E->A|evm|fund:ea",
+      "contractName": "CTLCMultipleEdges",
+      "partyNode": "E",
+      "counterpartyNode": "A",
+      "partyAccountIndex": 5,
+      "counterpartyAccountIndex": 1,
+      "tam": "evm",
+      "fundId": "fund:ea",
+      "fundingWei": "1000000000000000000",
+      "relativeTimelocks": [
+        6
+      ],
+      "conditions": [
+        [
+          [
+            "0x69e33190140d9e6702d076f47cefee18edebfaf541b44ba4e0430ffd1a6fcb94"
+          ],
+          [
+            "0xeb0c8fc7da9b0b9450e80cc3c6dc63b8a29aa0fed5cb1730b085858d550e6e01"
+          ]
+        ]
+      ],
+      "subcontracts": [
+        {
+          "level": 1,
+          "relativeTimelock": 6,
+          "optionSecretLabels": [
+            [
+              "secret:xe_0"
+            ],
+            [
+              "secret:xe_1"
+            ]
+          ],
+          "optionHashlocks": [
+            [
+              "0x69e33190140d9e6702d076f47cefee18edebfaf541b44ba4e0430ffd1a6fcb94"
+            ],
+            [
+              "0xeb0c8fc7da9b0b9450e80cc3c6dc63b8a29aa0fed5cb1730b085858d550e6e01"
+            ]
+          ],
+          "duplicateCount": 2
+        }
+      ],
+      "secretsByLabel": {
+        "secret:xe_0": "0xd20a138c1a18c9723b92df338d74e0b1",
+        "secret:xe_1": "0x2b0a55948ee6ddb92e77c346edec7039"
+      },
+      "xedgeIds": [
+        "xe_0",
+        "xe_1"
+      ]
+    }
+  ]
+}

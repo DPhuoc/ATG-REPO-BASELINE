@@ -1,0 +1,10 @@
+pair,contract,levels,duplicateVector,pattern,bestClaimGas,worstClaimGas,refundGas,bestDisableGas,worstDisableGas,refundDisableGas,deployGasDecimal,okAll,notes
+"B->C|evm|fund:bc","CTLCMultipleEdges","3","1|6|8","multi-level+multi-option","80267","177680","148301","","88762","88762","3424502","true","pair compiles to CTLCMultipleEdges; expect 2 disable step(s) before last claim/refund"
+"C->D|evm|fund:cd","CTLCMultipleEdges","2","4|8","multi-level+multi-option","80267","137535","112464","","52925","52925","2711744","true","pair compiles to CTLCMultipleEdges; expect 1 disable step(s) before last claim/refund"
+"C->E|evm|fund:ce","CTLCMultipleEdges","2","1|2","multi-level+multi-option","75948","133204","112464","","52925","52925","1469712","true","pair compiles to CTLCMultipleEdges; expect 1 disable step(s) before last claim/refund"
+"D->C|evm|fund:dc","CTLCMultipleEdges","2","1|2","multi-level+multi-option","80267","137535","112464","","52925","52925","1538412","true","pair compiles to CTLCMultipleEdges; expect 1 disable step(s) before last claim/refund"
+"D->E|evm|fund:de","CTLCMultipleEdges","2","2|4","multi-level+multi-option","75948","133204","112464","","52925","52925","1792037","true","pair compiles to CTLCMultipleEdges; expect 1 disable step(s) before last claim/refund"
+"E->F|evm|fund:ef","CTLCMultipleEdges","2","1|2","multi-level+multi-option","71641","128873","112464","","52925","52925","1400964","true","pair compiles to CTLCMultipleEdges; expect 1 disable step(s) before last claim/refund"
+"F->A|evm|fund:fa","CTLCOnly","1","1","single-level","64620","64620","59561","","0","0","1100987","true","best_claim and worst_claim are expected to match; pair compiles to CTLCOnly"
+"F->G|evm|fund:fg","CTLCMultipleEdges","1","2","single-level+multi-option","71641","71641","59539","","0","0","1239462","true","best_claim and worst_claim are expected to match; pair compiles to CTLCMultipleEdges"
+"G->A|evm|fund:ga","CTLCOnly","1","1","single-level","64620","64620","59561","","0","0","1100975","true","best_claim and worst_claim are expected to match; pair compiles to CTLCOnly"

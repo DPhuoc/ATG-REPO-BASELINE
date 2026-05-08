@@ -1,0 +1,11 @@
+pair,contract,levels,duplicateVector,pattern,bestClaimGas,worstClaimGas,refundGas,bestDisableGas,worstDisableGas,refundDisableGas,deployGasDecimal,okAll,notes
+"B->A|evm|fund:ba","CTLCOnly","1","1","single-level","64620","64620","59561","","0","0","1100987","true","best_claim and worst_claim are expected to match; pair compiles to CTLCOnly"
+"B->C|evm|fund:bc","CTLCMultipleEdges","3","1|1|3","multi-level+multi-option","75948","173372","148301","","88762","88762","1815053","true","pair compiles to CTLCMultipleEdges; expect 2 disable step(s) before last claim/refund"
+"C->D|evm|fund:cd","CTLCMultipleEdges","2","2|3","multi-level+multi-option","75948","133204","112464","","52925","52925","1676958","true","pair compiles to CTLCMultipleEdges; expect 1 disable step(s) before last claim/refund"
+"C->F|evm|fund:cf","CTLCOnly","2","1|1","multi-level","68747","129960","112508","","52947","52947","1261958","true","pair compiles to CTLCOnly; expect 1 disable step(s) before last claim/refund"
+"D->B|evm|fund:db","CTLCOnly","2","1|1","multi-level","68747","129972","112508","","52947","52947","1261982","true","pair compiles to CTLCOnly; expect 1 disable step(s) before last claim/refund"
+"D->E|evm|fund:de","CTLCMultipleEdges","1","3","single-level+multi-option","75948","75948","59539","","0","0","1377453","true","best_claim and worst_claim are expected to match; pair compiles to CTLCMultipleEdges"
+"D->F|evm|fund:df","CTLCOnly","1","1","single-level","68747","68747","59561","","0","0","1123899","true","best_claim and worst_claim are expected to match; pair compiles to CTLCOnly"
+"E->F|evm|fund:ef","CTLCOnly","2","1|1","multi-level","68723","129972","112508","","52947","52947","1261994","true","pair compiles to CTLCOnly; expect 1 disable step(s) before last claim/refund"
+"F->A|evm|fund:fa","CTLCOnly","1","1","single-level","64620","64620","59561","","0","0","1100987","true","best_claim and worst_claim are expected to match; pair compiles to CTLCOnly"
+"F->D|evm|fund:fd","CTLCOnly","1","1","single-level","72874","72874","59561","","0","0","1146811","true","best_claim and worst_claim are expected to match; pair compiles to CTLCOnly"

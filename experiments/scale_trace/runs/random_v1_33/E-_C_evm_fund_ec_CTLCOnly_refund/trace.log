@@ -1,0 +1,38 @@
+COMMAND: python3 experiments/scale_trace/scripts/trace_result_json.py /home/aothuatgiadp/blockchain/project/CTLC-Implementation/experiments/scale_trace/runs/random_v1_33/E-_C_evm_fund_ec_CTLCOnly_refund/result.json /home/aothuatgiadp/blockchain/project/CTLC-Implementation/experiments/scale_trace/runs/random_v1_33/E-_C_evm_fund_ec_CTLCOnly_refund/trace.json
+STATUS: 0
+
+STDOUT:
+{
+  "graph_id": "",
+  "pair": "E->C|evm|fund:ec",
+  "contract": "CTLCOnly",
+  "scenario": "refund",
+  "contractAddress": "0x577582E397A8d2e466d65ba516Ff56E33B8b8FF3",
+  "traces": {
+    "deploy": {
+      "tx_hash": "0xd82f94ae306fd6e150d0e0b6316eec92e9e4673e6c826584195de9e7e26d56a8",
+      "actual_calldata_bytes": 7187,
+      "actual_sstore_count": 11,
+      "actual_call_count": 0,
+      "opcode_steps": 1550
+    },
+    "fund": {
+      "tx_hash": "0xcbf0911ce01f6855f79fa0e6e6bc863ab536f24b899d06f8b9121c94823fe342",
+      "actual_calldata_bytes": 0,
+      "actual_sstore_count": 0,
+      "actual_call_count": 0,
+      "opcode_steps": 13
+    },
+    "refund_level0": {
+      "tx_hash": "0x0c0a96475036850ca6ed44e6fc309b6d6c3fc678c56e3d8bce8ecd7744ab6134",
+      "actual_calldata_bytes": 4,
+      "actual_sstore_count": 1,
+      "actual_call_count": 1,
+      "opcode_steps": 229
+    }
+  }
+}
+
+
+STDERR:
+

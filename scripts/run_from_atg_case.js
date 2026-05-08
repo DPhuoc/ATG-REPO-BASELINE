@@ -11,6 +11,7 @@ function parseArgs(argv) {
     else if (a === '--pair') out.pair = argv[++i];
     else if (a === '--scenario') out.scenario = argv[++i];
     else if (a === '--fund-wei') out.fundWei = argv[++i];
+    else if (a === '--out' || a === '--output' || a === '--output-json') out.outputJson = argv[++i];
   }
   return out;
 }
@@ -21,6 +22,7 @@ function sendRpc(provider, method, params = []) {
       { jsonrpc: '2.0', id: Date.now(), method, params },
       (err, res) => {
         if (err) return reject(err);
+        if (res && res.error) return reject(new Error(res.error.message || JSON.stringify(res.error)));
         resolve(res && res.result);
       },
     );
@@ -38,13 +40,51 @@ async function mineToBlock(web3, targetBlock) {
 }
 
 async function getDeployGas(web3, instance) {
-  const receipt = await web3.eth.getTransactionReceipt(instance.transactionHash);
+  const txHash = instance.transactionHash || instance.tx || '';
+  if (!txHash) return '';
+  const receipt = await web3.eth.getTransactionReceipt(txHash);
   return receipt ? String(receipt.gasUsed) : '';
+}
+
+function txHashOf(txLike) {
+  return (txLike && (txLike.tx || txLike.transactionHash)) || '';
+}
+
+function addTx(result, role, txLike, extra = {}) {
+  const txHash = txHashOf(txLike);
+  if (!txHash) return;
+
+  if (!Array.isArray(result.transactions)) result.transactions = [];
+  result.transactions.push({ role, txHash, ...extra });
+
+  if (!Array.isArray(result.txRoles)) result.txRoles = [];
+  result.txRoles.push({ role, txHash, ...extra });
+
+  if (role === 'deploy') {
+    result.deployTxHash = txHash;
+  } else if (role === 'fund') {
+    result.fundTxHash = txHash;
+  } else if (role === 'claim') {
+    result.claimTxHash = txHash;
+    if (!result.txHash) result.txHash = txHash;
+    if (!result.tx) result.tx = txHash;
+  } else if (role === 'refund') {
+    result.refundTxHash = txHash;
+    if (!result.refundTx) result.refundTx = txHash;
+  } else if (role === 'disable') {
+    if (!Array.isArray(result.disableTxHashes)) result.disableTxHashes = [];
+    result.disableTxHashes.push(txHash);
+    if (!result.disableTxHash) result.disableTxHash = txHash;
+    if (!result.disableTx) result.disableTx = txHash;
+  }
 }
 
 function chooseOption(subcontract, idx = 0) {
   if (!subcontract || !Array.isArray(subcontract.optionSecretLabels) || subcontract.optionSecretLabels.length === 0) {
     throw new Error('subcontract has no claim options');
+  }
+  if (idx < 0 || idx >= subcontract.optionSecretLabels.length) {
+    throw new Error(`option index out of range: idx=${idx}, options=${subcontract.optionSecretLabels.length}`);
   }
   return subcontract.optionSecretLabels[idx];
 }
@@ -64,15 +104,44 @@ function pickContract(compiled, pairKey) {
   return found;
 }
 
+function writeOutput(outputPath, payload) {
+  if (!outputPath) return;
+  fs.mkdirSync(path.dirname(path.resolve(outputPath)), { recursive: true });
+  fs.writeFileSync(path.resolve(outputPath), `${JSON.stringify(payload, null, 2)}\n`, 'utf8');
+}
+
+function compiledGraphId(compiled) {
+  return (
+    compiled.graph_id ||
+    compiled.graphId ||
+    (compiled.meta && (compiled.meta.graph_id || compiled.meta.graphId)) ||
+    ''
+  );
+}
+
+function secretsFromLabels(spec, labels) {
+  return labels.map((label) => {
+    const secret = spec.secretsByLabel && spec.secretsByLabel[label];
+    if (!secret) throw new Error(`missing secret for label: ${label}`);
+    return secret;
+  });
+}
+
 module.exports = async function(callback) {
+  const args = parseArgs(process.argv);
+  const scenario = args.scenario || process.env.SCENARIO || 'best_claim';
+  const outputPath = args.outputJson || process.env.OUTPUT_JSON || '';
+
   try {
-    const args = parseArgs(process.argv);
-    const scenario = args.scenario || 'best_claim';
+    if (!args.compiled && !args.atg) {
+      throw new Error('Missing --compiled or --atg');
+    }
+
     const compiled = args.compiled
       ? loadJson(args.compiled)
       : compileATG(loadJson(args.atg));
 
-    const spec = pickContract(compiled, args.pair);
+    const spec = pickContract(compiled, args.pair || process.env.PAIR || '');
     const accounts = await web3.eth.getAccounts();
     const deployer = accounts[0];
     const party = accounts[spec.partyAccountIndex];
@@ -85,7 +154,7 @@ module.exports = async function(callback) {
     const currentBlock = await web3.eth.getBlockNumber();
     const absoluteTimelocks = spec.relativeTimelocks.map((x) => currentBlock + Number(x));
     const Contract = artifacts.require(spec.contractName);
-    const fundWei = String(args.fundWei || spec.fundingWei || '1000000000000000000');
+    const fundWei = String(args.fundWei || process.env.FUND_WEI || spec.fundingWei || '1000000000000000000');
 
     const instance = await Contract.new(
       party,
@@ -95,11 +164,11 @@ module.exports = async function(callback) {
       { from: deployer },
     );
 
-    await web3.eth.sendTransaction({ from: deployer, to: instance.address, value: fundWei });
-
     const result = {
       ok: true,
+      graph_id: compiledGraphId(compiled),
       pair: spec.key,
+      pairKey: spec.key,
       contract: spec.contractName,
       scenario,
       deployGas: await getDeployGas(web3, instance),
@@ -111,40 +180,58 @@ module.exports = async function(callback) {
       startBlock: String(currentBlock),
       endBlock: '',
       finalContractBalanceWei: '',
+      deployer,
       party,
       counterparty,
+      fundingWei: fundWei,
       timelocks: absoluteTimelocks,
+      transactions: [],
+      txRoles: [],
     };
+
+    addTx(result, 'deploy', instance);
+
+    const fundTx = await web3.eth.sendTransaction({
+      from: deployer,
+      to: instance.address,
+      value: fundWei,
+    });
+    addTx(result, 'fund', fundTx);
 
     const levels = spec.subcontracts.length;
     const lastIdx = levels - 1;
+    if (levels <= 0) throw new Error('compiled contract has no subcontracts');
 
     if (scenario === 'best_claim') {
       const labels = chooseOption(spec.subcontracts[0], 0);
-      const secrets = labels.map((l) => spec.secretsByLabel[l]);
-      let tx;
+      const secrets = secretsFromLabels(spec, labels);
+      let claimTx;
       if (spec.contractName === 'CTLCOnly') {
-        tx = await instance.claim(0, secrets, { from: counterparty });
+        claimTx = await instance.claim(0, secrets, { from: counterparty });
       } else {
-        tx = await instance.claim(0, 0, secrets, { from: counterparty });
+        claimTx = await instance.claim(0, 0, secrets, { from: counterparty });
       }
-      result.gasUsed = String(tx.receipt.gasUsed);
+      addTx(result, 'claim', claimTx, { level: 0, option: 0 });
+      result.gasUsed = String(claimTx.receipt.gasUsed);
       result.claimGasUsed = result.gasUsed;
     } else if (scenario === 'worst_claim') {
       let disableTotal = 0n;
       for (let i = 0; i < lastIdx; i += 1) {
         await mineToBlock(web3, absoluteTimelocks[i]);
-        const tx = await instance.disableSubcontract(i, { from: party });
-        disableTotal += BigInt(tx.receipt.gasUsed);
+        const disableTx = await instance.disableSubcontract(i, { from: party });
+        addTx(result, 'disable', disableTx, { level: i });
+        disableTotal += BigInt(disableTx.receipt.gasUsed);
       }
+
       const labels = chooseOption(spec.subcontracts[lastIdx], 0);
-      const secrets = labels.map((l) => spec.secretsByLabel[l]);
+      const secrets = secretsFromLabels(spec, labels);
       let claimTx;
       if (spec.contractName === 'CTLCOnly') {
         claimTx = await instance.claim(lastIdx, secrets, { from: counterparty });
       } else {
         claimTx = await instance.claim(lastIdx, 0, secrets, { from: counterparty });
       }
+      addTx(result, 'claim', claimTx, { level: lastIdx, option: 0 });
       result.disableGasUsed = String(disableTotal);
       result.claimGasUsed = String(claimTx.receipt.gasUsed);
       result.gasUsed = String(disableTotal + BigInt(claimTx.receipt.gasUsed));
@@ -152,11 +239,14 @@ module.exports = async function(callback) {
       let disableTotal = 0n;
       for (let i = 0; i < lastIdx; i += 1) {
         await mineToBlock(web3, absoluteTimelocks[i]);
-        const tx = await instance.disableSubcontract(i, { from: party });
-        disableTotal += BigInt(tx.receipt.gasUsed);
+        const disableTx = await instance.disableSubcontract(i, { from: party });
+        addTx(result, 'disable', disableTx, { level: i });
+        disableTotal += BigInt(disableTx.receipt.gasUsed);
       }
+
       await mineToBlock(web3, absoluteTimelocks[lastIdx]);
       const refundTx = await instance.refund({ from: party });
+      addTx(result, 'refund', refundTx, { level: lastIdx });
       result.disableGasUsed = String(disableTotal);
       result.refundGasUsed = String(refundTx.receipt.gasUsed);
       result.gasUsed = String(disableTotal + BigInt(refundTx.receipt.gasUsed));
@@ -167,10 +257,19 @@ module.exports = async function(callback) {
     result.endBlock = String(await web3.eth.getBlockNumber());
     result.finalContractBalanceWei = await web3.eth.getBalance(instance.address);
 
+    writeOutput(outputPath, result);
     console.log(JSON.stringify(result, null, 2));
     callback();
   } catch (err) {
-    console.error(JSON.stringify({ ok: false, error: err.message, stack: err.stack }, null, 2));
+    const failure = {
+      ok: false,
+      contract: null,
+      scenario,
+      error: err && err.message ? err.message : String(err),
+      stack: err && err.stack ? err.stack : null,
+    };
+    writeOutput(outputPath, failure);
+    console.error(JSON.stringify(failure, null, 2));
     callback(err);
   }
 };

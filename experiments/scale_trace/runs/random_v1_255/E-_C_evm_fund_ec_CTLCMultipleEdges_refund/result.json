@@ -1,0 +1,86 @@
+{
+  "ok": true,
+  "graph_id": "",
+  "pair": "E->C|evm|fund:ec",
+  "pairKey": "E->C|evm|fund:ec",
+  "contract": "CTLCMultipleEdges",
+  "scenario": "refund",
+  "deployGas": "0x1996fa",
+  "gasUsed": "148301",
+  "disableGasUsed": "88762",
+  "claimGasUsed": "",
+  "refundGasUsed": "59539",
+  "contractAddress": "0x579D1Eb01513A490b3f1fdfEf20382690D099b86",
+  "startBlock": "0",
+  "endBlock": "11",
+  "finalContractBalanceWei": "0",
+  "deployer": "0xC625659f2b0935E99F5CBDb125BCba5eE4323e73",
+  "party": "0x162f93d1c7361d4FCc4fa45541a0483e4c529ecA",
+  "counterparty": "0x201c52e3Ce10b96d28b1C433a8dEd5c51AB1704b",
+  "fundingWei": "1000000000000000000",
+  "timelocks": [
+    8,
+    9,
+    10
+  ],
+  "transactions": [
+    {
+      "role": "deploy",
+      "txHash": "0xb9c165357f5073ee71ffb09ab395d520390a18b45d46e9ac73e4fa93dde217bf"
+    },
+    {
+      "role": "fund",
+      "txHash": "0x2002b4fcf0048b478b1b4000266d78f8c97fc1ed9dd215e963f5745f489b41a6"
+    },
+    {
+      "role": "disable",
+      "txHash": "0x127c0e028a7392aac1c065b4beacd5a8e83d4e7de1059721f7abc1dcfd50bcd3",
+      "level": 0
+    },
+    {
+      "role": "disable",
+      "txHash": "0x5647b84b4a722fe0546341ecc22c72324f9e5a4cdf292e310a90ea8625ebccf0",
+      "level": 1
+    },
+    {
+      "role": "refund",
+      "txHash": "0x7d9f94370a760569ce81cc5d363d71b9373841c6aee9f190bba7e396fa797995",
+      "level": 2
+    }
+  ],
+  "txRoles": [
+    {
+      "role": "deploy",
+      "txHash": "0xb9c165357f5073ee71ffb09ab395d520390a18b45d46e9ac73e4fa93dde217bf"
+    },
+    {
+      "role": "fund",
+      "txHash": "0x2002b4fcf0048b478b1b4000266d78f8c97fc1ed9dd215e963f5745f489b41a6"
+    },
+    {
+      "role": "disable",
+      "txHash": "0x127c0e028a7392aac1c065b4beacd5a8e83d4e7de1059721f7abc1dcfd50bcd3",
+      "level": 0
+    },
+    {
+      "role": "disable",
+      "txHash": "0x5647b84b4a722fe0546341ecc22c72324f9e5a4cdf292e310a90ea8625ebccf0",
+      "level": 1
+    },
+    {
+      "role": "refund",
+      "txHash": "0x7d9f94370a760569ce81cc5d363d71b9373841c6aee9f190bba7e396fa797995",
+      "level": 2
+    }
+  ],
+  "deployTxHash": "0xb9c165357f5073ee71ffb09ab395d520390a18b45d46e9ac73e4fa93dde217bf",
+  "fundTxHash": "0x2002b4fcf0048b478b1b4000266d78f8c97fc1ed9dd215e963f5745f489b41a6",
+  "disableTxHashes": [
+    "0x127c0e028a7392aac1c065b4beacd5a8e83d4e7de1059721f7abc1dcfd50bcd3",
+    "0x5647b84b4a722fe0546341ecc22c72324f9e5a4cdf292e310a90ea8625ebccf0"
+  ],
+  "disableTxHash": "0x127c0e028a7392aac1c065b4beacd5a8e83d4e7de1059721f7abc1dcfd50bcd3",
+  "disableTx": "0x127c0e028a7392aac1c065b4beacd5a8e83d4e7de1059721f7abc1dcfd50bcd3",
+  "refundTxHash": "0x7d9f94370a760569ce81cc5d363d71b9373841c6aee9f190bba7e396fa797995",
+  "refundTx": "0x7d9f94370a760569ce81cc5d363d71b9373841c6aee9f190bba7e396fa797995"
+}

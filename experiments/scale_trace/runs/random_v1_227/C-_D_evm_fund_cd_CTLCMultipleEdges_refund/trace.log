@@ -1,0 +1,59 @@
+COMMAND: python3 experiments/scale_trace/scripts/trace_result_json.py /home/aothuatgiadp/blockchain/project/CTLC-Implementation/experiments/scale_trace/runs/random_v1_227/C-_D_evm_fund_cd_CTLCMultipleEdges_refund/result.json /home/aothuatgiadp/blockchain/project/CTLC-Implementation/experiments/scale_trace/runs/random_v1_227/C-_D_evm_fund_cd_CTLCMultipleEdges_refund/trace.json
+STATUS: 0
+
+STDOUT:
+{
+  "graph_id": "",
+  "pair": "C->D|evm|fund:cd",
+  "contract": "CTLCMultipleEdges",
+  "scenario": "refund",
+  "contractAddress": "0x6561a0ed606392DF85C3FF7Ca769E9b4367A64EE",
+  "traces": {
+    "deploy": {
+      "tx_hash": "0x4c1df84927987eb29348808711611d465c6f5f0a9a63c47fe77ca2b185e03321",
+      "actual_calldata_bytes": 11177,
+      "actual_sstore_count": 102,
+      "actual_call_count": 0,
+      "opcode_steps": 13899
+    },
+    "fund": {
+      "tx_hash": "0x6c0298de4170e53f0a811cf7c415cd103b0180464ea1e7508346f8a2126777e8",
+      "actual_calldata_bytes": 0,
+      "actual_sstore_count": 0,
+      "actual_call_count": 0,
+      "opcode_steps": 13
+    },
+    "disable_level0": {
+      "tx_hash": "0x8bf72445c18fc869b0d7db704004d2fa7a3a8128ce4363eec0684d3e65b6c4d5",
+      "actual_calldata_bytes": 36,
+      "actual_sstore_count": 1,
+      "actual_call_count": 0,
+      "opcode_steps": 300
+    },
+    "disable_level1": {
+      "tx_hash": "0x35350a6191397662e0c78b5ce5576446f401d6257702a516b902bcd961a002fb",
+      "actual_calldata_bytes": 36,
+      "actual_sstore_count": 1,
+      "actual_call_count": 0,
+      "opcode_steps": 300
+    },
+    "disable_level2": {
+      "tx_hash": "0x06c281158ea160e3544ecd76ead747bd6f2810e8c90eaff606fbc713bb2347e8",
+      "actual_calldata_bytes": 36,
+      "actual_sstore_count": 1,
+      "actual_call_count": 0,
+      "opcode_steps": 300
+    },
+    "refund_level3": {
+      "tx_hash": "0x4db046b6ad19481b098ed60e3899583a4babb5239477c2dec85396a8f3cd58d6",
+      "actual_calldata_bytes": 4,
+      "actual_sstore_count": 1,
+      "actual_call_count": 1,
+      "opcode_steps": 224
+    }
+  }
+}
+
+
+STDERR:
+
