@@ -1,0 +1,58 @@
+{
+  "ok": true,
+  "graph_id": "",
+  "pair": "B->A|evm|fund:ba",
+  "pairKey": "B->A|evm|fund:ba",
+  "contract": "CTLCOnly",
+  "scenario": "refund",
+  "deployGas": "0x10ccbb",
+  "gasUsed": "59561",
+  "disableGasUsed": "0",
+  "claimGasUsed": "",
+  "refundGasUsed": "59561",
+  "contractAddress": "0xbeC5374BFbA584ce3DAbda28b90Ae85E37995087",
+  "startBlock": "0",
+  "endBlock": "7",
+  "finalContractBalanceWei": "0",
+  "deployer": "0x17c4F9FC836E8388294CA302E698B7405ed52941",
+  "party": "0x0D4Fbed047C7A50cb9A25D0c01f8B4Cf52d0beEc",
+  "counterparty": "0x99886d4E413820033F9E240e3201693b993f1429",
+  "fundingWei": "1000000000000000000",
+  "timelocks": [
+    6
+  ],
+  "transactions": [
+    {
+      "role": "deploy",
+      "txHash": "0xfb7c4c45e50e38b25769b36dd6998863ce07176a29a015db4f55a5b118dff638"
+    },
+    {
+      "role": "fund",
+      "txHash": "0x436758d286f56cc363cbb2b908b30c0f04ef3ea31bda87b244c49c25fddd2b1f"
+    },
+    {
+      "role": "refund",
+      "txHash": "0xb2922d48ea3d3f57bf085f0e722fda33d5dd579f60b12f623127c872cfd33d91",
+      "level": 0
+    }
+  ],
+  "txRoles": [
+    {
+      "role": "deploy",
+      "txHash": "0xfb7c4c45e50e38b25769b36dd6998863ce07176a29a015db4f55a5b118dff638"
+    },
+    {
+      "role": "fund",
+      "txHash": "0x436758d286f56cc363cbb2b908b30c0f04ef3ea31bda87b244c49c25fddd2b1f"
+    },
+    {
+      "role": "refund",
+      "txHash": "0xb2922d48ea3d3f57bf085f0e722fda33d5dd579f60b12f623127c872cfd33d91",
+      "level": 0
+    }
+  ],
+  "deployTxHash": "0xfb7c4c45e50e38b25769b36dd6998863ce07176a29a015db4f55a5b118dff638",
+  "fundTxHash": "0x436758d286f56cc363cbb2b908b30c0f04ef3ea31bda87b244c49c25fddd2b1f",
+  "refundTxHash": "0xb2922d48ea3d3f57bf085f0e722fda33d5dd579f60b12f623127c872cfd33d91",
+  "refundTx": "0xb2922d48ea3d3f57bf085f0e722fda33d5dd579f60b12f623127c872cfd33d91"
+}

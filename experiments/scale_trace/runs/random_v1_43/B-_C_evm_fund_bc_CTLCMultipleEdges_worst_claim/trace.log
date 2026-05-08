@@ -1,0 +1,59 @@
+COMMAND: python3 experiments/scale_trace/scripts/trace_result_json.py /home/aothuatgiadp/blockchain/project/CTLC-Implementation/experiments/scale_trace/runs/random_v1_43/B-_C_evm_fund_bc_CTLCMultipleEdges_worst_claim/result.json /home/aothuatgiadp/blockchain/project/CTLC-Implementation/experiments/scale_trace/runs/random_v1_43/B-_C_evm_fund_bc_CTLCMultipleEdges_worst_claim/trace.json
+STATUS: 0
+
+STDOUT:
+{
+  "graph_id": "",
+  "pair": "B->C|evm|fund:bc",
+  "contract": "CTLCMultipleEdges",
+  "scenario": "worst_claim",
+  "contractAddress": "0x6D13061BFc52Df5171fb9013a1a1c62c30A60BBC",
+  "traces": {
+    "deploy": {
+      "tx_hash": "0x17398bf4e32350d69ed913c26035c4f96363f260bd6884ac9e1ad76da11ae55f",
+      "actual_calldata_bytes": 9801,
+      "actual_sstore_count": 65,
+      "actual_call_count": 0,
+      "opcode_steps": 9341
+    },
+    "fund": {
+      "tx_hash": "0x35e3a821085dcf4fbd8cdeb30b6c7fcd178c223a2eb2dfaa16121fce6b975296",
+      "actual_calldata_bytes": 0,
+      "actual_sstore_count": 0,
+      "actual_call_count": 0,
+      "opcode_steps": 13
+    },
+    "disable_level0": {
+      "tx_hash": "0x86f7c3478fb728bf7ff3e1d5746c6d27b0139b2b17e55523f3ccc95105100d42",
+      "actual_calldata_bytes": 36,
+      "actual_sstore_count": 1,
+      "actual_call_count": 0,
+      "opcode_steps": 300
+    },
+    "disable_level1": {
+      "tx_hash": "0x9dce73622aae2c6feb88f3c1d366afad23edb8fead9b0577ed8c3ed6310fd6f6",
+      "actual_calldata_bytes": 36,
+      "actual_sstore_count": 1,
+      "actual_call_count": 0,
+      "opcode_steps": 300
+    },
+    "disable_level2": {
+      "tx_hash": "0xbd046446a74aaac35a74b74d33a6ecd380234b61c058814b99f8b89b073a03e1",
+      "actual_calldata_bytes": 36,
+      "actual_sstore_count": 1,
+      "actual_call_count": 0,
+      "opcode_steps": 300
+    },
+    "claim_level3": {
+      "tx_hash": "0x191bba08c16ac4503310dcbbb26b8ad604126e2b8fddb05d723fd02f4dd2100c",
+      "actual_calldata_bytes": 708,
+      "actual_sstore_count": 1,
+      "actual_call_count": 1,
+      "opcode_steps": 2665
+    }
+  }
+}
+
+
+STDERR:
+

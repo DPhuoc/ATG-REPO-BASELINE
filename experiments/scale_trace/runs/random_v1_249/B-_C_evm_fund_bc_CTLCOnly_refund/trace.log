@@ -1,0 +1,59 @@
+COMMAND: python3 experiments/scale_trace/scripts/trace_result_json.py /home/aothuatgiadp/blockchain/project/CTLC-Implementation/experiments/scale_trace/runs/random_v1_249/B-_C_evm_fund_bc_CTLCOnly_refund/result.json /home/aothuatgiadp/blockchain/project/CTLC-Implementation/experiments/scale_trace/runs/random_v1_249/B-_C_evm_fund_bc_CTLCOnly_refund/trace.json
+STATUS: 0
+
+STDOUT:
+{
+  "graph_id": "",
+  "pair": "B->C|evm|fund:bc",
+  "contract": "CTLCOnly",
+  "scenario": "refund",
+  "contractAddress": "0x24B06a14EF8246EB1094641f436CE0f4bef3Ca2d",
+  "traces": {
+    "deploy": {
+      "tx_hash": "0xf25c3405b22bb027c9f99a3e9668866d048156d55175f5fe139aeff96d0e7298",
+      "actual_calldata_bytes": 7795,
+      "actual_sstore_count": 27,
+      "actual_call_count": 0,
+      "opcode_steps": 4044
+    },
+    "fund": {
+      "tx_hash": "0x8b0391d655a23d48a53d199acfe6276f0823127e80171c65ae78772834c9f23a",
+      "actual_calldata_bytes": 0,
+      "actual_sstore_count": 0,
+      "actual_call_count": 0,
+      "opcode_steps": 13
+    },
+    "disable_level0": {
+      "tx_hash": "0x28a423e46639a16f9a744fd3628ef00304a6502dffaaa4b644360aec6c917cff",
+      "actual_calldata_bytes": 36,
+      "actual_sstore_count": 1,
+      "actual_call_count": 0,
+      "opcode_steps": 305
+    },
+    "disable_level1": {
+      "tx_hash": "0xeb0c8b830c2e52137ffc581280ff22f6aec6a2985e912676b93c4bca2d7dd0d2",
+      "actual_calldata_bytes": 36,
+      "actual_sstore_count": 1,
+      "actual_call_count": 0,
+      "opcode_steps": 305
+    },
+    "disable_level2": {
+      "tx_hash": "0x26346a73ab8c83d36bd14a590e559e8e7cf0139d404eabd2392661bee75be5ab",
+      "actual_calldata_bytes": 36,
+      "actual_sstore_count": 1,
+      "actual_call_count": 0,
+      "opcode_steps": 305
+    },
+    "refund_level3": {
+      "tx_hash": "0x53e9ffd27525894af96d6b68e77ebfff1a12d3f54596b47f2e44edce2cfd071e",
+      "actual_calldata_bytes": 4,
+      "actual_sstore_count": 1,
+      "actual_call_count": 1,
+      "opcode_steps": 229
+    }
+  }
+}
+
+
+STDERR:
+

@@ -1,0 +1,11 @@
+pair,contract,levels,duplicateVector,pattern,bestClaimGas,worstClaimGas,refundGas,bestDisableGas,worstDisableGas,refundDisableGas,deployGasDecimal,okAll,notes
+"B->A|evm|fund:ba","CTLCOnly","1","1","single-level","64620","64620","59561","","0","0","1100975","true","best_claim and worst_claim are expected to match; pair compiles to CTLCOnly"
+"B->C|evm|fund:bc","CTLCOnly","4","1|1|1|1","multi-level","68747","205829","184226","","124665","124665","1538196","true","pair compiles to CTLCOnly; expect 3 disable step(s) before last claim/refund"
+"C->A|evm|fund:ca","CTLCOnly","1","1","single-level","64620","64620","59561","","0","0","1100987","true","best_claim and worst_claim are expected to match; pair compiles to CTLCOnly"
+"C->D|evm|fund:cd","CTLCOnly","2","1|1","multi-level","77013","134123","112508","","52947","52947","1330730","true","pair compiles to CTLCOnly; expect 1 disable step(s) before last claim/refund"
+"C->E|evm|fund:ce","CTLCOnly","2","1|1","multi-level","72874","129972","112508","","52947","52947","1284882","true","pair compiles to CTLCOnly; expect 1 disable step(s) before last claim/refund"
+"C->F|evm|fund:cf","CTLCOnly","2","1|1","multi-level","68747","125833","112508","","52947","52947","1239046","true","pair compiles to CTLCOnly; expect 1 disable step(s) before last claim/refund"
+"D->E|evm|fund:de","CTLCOnly","3","1|1|1","multi-level","72862","169982","148367","","88806","88806","1445913","true","pair compiles to CTLCOnly; expect 2 disable step(s) before last claim/refund"
+"E->F|evm|fund:ef","CTLCOnly","3","1|1|1","multi-level","68735","165831","148367","","88806","88806","1377177","true","pair compiles to CTLCOnly; expect 2 disable step(s) before last claim/refund"
+"F->A|evm|fund:fa","CTLCOnly","1","1","single-level","64620","64620","59561","","0","0","1100987","true","best_claim and worst_claim are expected to match; pair compiles to CTLCOnly"
+"F->B|evm|fund:fb","CTLCOnly","2","1|1","multi-level","68747","125833","112508","","52947","52947","1239082","true","pair compiles to CTLCOnly; expect 1 disable step(s) before last claim/refund"

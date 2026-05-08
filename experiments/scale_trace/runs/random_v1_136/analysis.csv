@@ -1,0 +1,9 @@
+pair,contract,levels,duplicateVector,pattern,bestClaimGas,worstClaimGas,refundGas,bestDisableGas,worstDisableGas,refundDisableGas,deployGasDecimal,okAll,notes
+"B->C|evm|fund:bc","CTLCMultipleEdges","3","1|2|4","multi-level+multi-option","75948","173372","148301","","88762","88762","2068099","true","pair compiles to CTLCMultipleEdges; expect 2 disable step(s) before last claim/refund"
+"C->D|evm|fund:cd","CTLCMultipleEdges","3","1|2|4","multi-level+multi-option","71641","169041","148301","","88762","88762","1907703","true","pair compiles to CTLCMultipleEdges; expect 2 disable step(s) before last claim/refund"
+"D->A|evm|fund:da","CTLCOnly","1","1","single-level","64620","64620","59561","","0","0","1100987","true","best_claim and worst_claim are expected to match; pair compiles to CTLCOnly"
+"D->E|evm|fund:de","CTLCMultipleEdges","2","2|4","multi-level+multi-option","71641","128885","112464","","52925","52925","1654529","true","pair compiles to CTLCMultipleEdges; expect 1 disable step(s) before last claim/refund"
+"E->A|evm|fund:ea","CTLCMultipleEdges","1","2","single-level+multi-option","67334","67334","59539","","0","0","1193626","true","best_claim and worst_claim are expected to match; pair compiles to CTLCMultipleEdges"
+"E->F|evm|fund:ef","CTLCMultipleEdges","2","4|2","multi-level+multi-option","71641","137535","112464","","52925","52925","1700353","true","pair compiles to CTLCMultipleEdges; expect 1 disable step(s) before last claim/refund"
+"F->A|evm|fund:fa","CTLCMultipleEdges","1","2","single-level+multi-option","67334","67334","59539","","0","0","1193638","true","best_claim and worst_claim are expected to match; pair compiles to CTLCMultipleEdges"
+"F->B|evm|fund:fb","CTLCMultipleEdges","2","1|2","multi-level+multi-option","80267","137523","112464","","52925","52925","1538448","true","pair compiles to CTLCMultipleEdges; expect 1 disable step(s) before last claim/refund"

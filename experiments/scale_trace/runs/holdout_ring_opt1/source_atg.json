@@ -1,0 +1,60 @@
+{
+  "leader": "A",
+  "nodes": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "X1"
+  ],
+  "arcs": [
+    {
+      "id": "ba",
+      "from": "B",
+      "to": "A",
+      "tam": "evm",
+      "fundId": "fund:ba"
+    },
+    {
+      "id": "cb",
+      "from": "C",
+      "to": "B",
+      "tam": "evm",
+      "fundId": "fund:cb"
+    },
+    {
+      "id": "dc",
+      "from": "D",
+      "to": "C",
+      "tam": "evm",
+      "fundId": "fund:dc"
+    },
+    {
+      "id": "ad",
+      "from": "A",
+      "to": "D",
+      "tam": "evm",
+      "fundId": "fund:ad"
+    },
+    {
+      "id": "cx1",
+      "from": "C",
+      "to": "X1",
+      "tam": "evm",
+      "fundId": "fund:cx1"
+    },
+    {
+      "id": "x1a",
+      "from": "X1",
+      "to": "A",
+      "tam": "evm",
+      "fundId": "fund:x1a"
+    }
+  ],
+  "meta": {
+    "graph_id": "holdout_ring_opt1",
+    "family": "ring",
+    "options": 1,
+    "original_leader": "A"
+  }
+}

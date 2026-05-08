@@ -1,0 +1,10 @@
+pair,contract,levels,duplicateVector,pattern,bestClaimGas,worstClaimGas,refundGas,bestDisableGas,worstDisableGas,refundDisableGas,deployGasDecimal,okAll,notes
+"B->C|evm|fund:bc","CTLCMultipleEdges","2","2|4","multi-level+multi-option","75948","141831","112464","","52925","52925","1975309","true","pair compiles to CTLCMultipleEdges; expect 1 disable step(s) before last claim/refund"
+"C->D|evm|fund:cd","CTLCMultipleEdges","1","4","single-level+multi-option","84598","84598","59539","","0","0","1652880","true","best_claim and worst_claim are expected to match; pair compiles to CTLCMultipleEdges"
+"C->G|evm|fund:cg","CTLCMultipleEdges","1","2","single-level+multi-option","71629","71629","59539","","0","0","1239450","true","best_claim and worst_claim are expected to match; pair compiles to CTLCMultipleEdges"
+"D->E|evm|fund:de","CTLCMultipleEdges","1","8","single-level+multi-option","80267","80267","59539","","0","0","2021560","true","best_claim and worst_claim are expected to match; pair compiles to CTLCMultipleEdges"
+"E->C|evm|fund:ec","CTLCMultipleEdges","1","2","single-level+multi-option","75948","75948","59539","","0","0","1285286","true","best_claim and worst_claim are expected to match; pair compiles to CTLCMultipleEdges"
+"E->F|evm|fund:ef","CTLCMultipleEdges","1","2","single-level+multi-option","75948","75948","59539","","0","0","1285286","true","best_claim and worst_claim are expected to match; pair compiles to CTLCMultipleEdges"
+"F->D|evm|fund:fd","CTLCMultipleEdges","1","4","single-level+multi-option","84598","84598","59539","","0","0","1652916","true","best_claim and worst_claim are expected to match; pair compiles to CTLCMultipleEdges"
+"F->G|evm|fund:fg","CTLCMultipleEdges","1","2","single-level+multi-option","71641","71641","59539","","0","0","1239462","true","best_claim and worst_claim are expected to match; pair compiles to CTLCMultipleEdges"
+"G->A|evm|fund:ga","CTLCMultipleEdges","1","2","single-level+multi-option","67334","67334","59539","","0","0","1193626","true","best_claim and worst_claim are expected to match; pair compiles to CTLCMultipleEdges"

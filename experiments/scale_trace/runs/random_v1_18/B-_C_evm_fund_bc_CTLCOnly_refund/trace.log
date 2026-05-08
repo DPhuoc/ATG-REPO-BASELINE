@@ -1,0 +1,66 @@
+COMMAND: python3 experiments/scale_trace/scripts/trace_result_json.py /home/aothuatgiadp/blockchain/project/CTLC-Implementation/experiments/scale_trace/runs/random_v1_18/B-_C_evm_fund_bc_CTLCOnly_refund/result.json /home/aothuatgiadp/blockchain/project/CTLC-Implementation/experiments/scale_trace/runs/random_v1_18/B-_C_evm_fund_bc_CTLCOnly_refund/trace.json
+STATUS: 0
+
+STDOUT:
+{
+  "graph_id": "",
+  "pair": "B->C|evm|fund:bc",
+  "contract": "CTLCOnly",
+  "scenario": "refund",
+  "contractAddress": "0x8Ce988BE1C09769E421B58BaC6359D8eaBEe42c0",
+  "traces": {
+    "deploy": {
+      "tx_hash": "0xc8f0a9622a6be95ef508b5032d0d1a8809d6c52d28ef9f0ac250e1eb6400f116",
+      "actual_calldata_bytes": 8083,
+      "actual_sstore_count": 35,
+      "actual_call_count": 0,
+      "opcode_steps": 5110
+    },
+    "fund": {
+      "tx_hash": "0x82d306b6b17891efd8ac5002112b11590264f66a16f51224799042e269af85bb",
+      "actual_calldata_bytes": 0,
+      "actual_sstore_count": 0,
+      "actual_call_count": 0,
+      "opcode_steps": 13
+    },
+    "disable_level0": {
+      "tx_hash": "0x704fd00dda831c46be4474879c5d2e59551d60ff80d8e630c7d88edbfc4be0aa",
+      "actual_calldata_bytes": 36,
+      "actual_sstore_count": 1,
+      "actual_call_count": 0,
+      "opcode_steps": 305
+    },
+    "disable_level1": {
+      "tx_hash": "0xace6d0d086d57c15327405a4d37de3a29cb5c4f54b2299fa585432310020d7fb",
+      "actual_calldata_bytes": 36,
+      "actual_sstore_count": 1,
+      "actual_call_count": 0,
+      "opcode_steps": 305
+    },
+    "disable_level2": {
+      "tx_hash": "0x85866c674f6226cdbd663f53be860606e06cc793260749c2f1382e7c80f203f7",
+      "actual_calldata_bytes": 36,
+      "actual_sstore_count": 1,
+      "actual_call_count": 0,
+      "opcode_steps": 305
+    },
+    "disable_level3": {
+      "tx_hash": "0xb84eb1a0569f3878526a29f07f032448e8f2299a7853ae4a0f76cac9a76bfba1",
+      "actual_calldata_bytes": 36,
+      "actual_sstore_count": 1,
+      "actual_call_count": 0,
+      "opcode_steps": 305
+    },
+    "refund_level4": {
+      "tx_hash": "0x8387f365b5bca9793270c6d2566d262487c09cc7786a1f65ceefef0f645a4be8",
+      "actual_calldata_bytes": 4,
+      "actual_sstore_count": 1,
+      "actual_call_count": 1,
+      "opcode_steps": 229
+    }
+  }
+}
+
+
+STDERR:
+

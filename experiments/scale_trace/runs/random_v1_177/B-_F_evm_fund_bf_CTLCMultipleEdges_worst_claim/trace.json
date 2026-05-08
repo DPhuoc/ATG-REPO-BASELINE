@@ -1,0 +1,44 @@
+{
+  "graph_id": "",
+  "pair": "B->F|evm|fund:bf",
+  "contract": "CTLCMultipleEdges",
+  "scenario": "worst_claim",
+  "contractAddress": "0x29Cf63815b6D31cC30Cc70c2300EE68c7ee29277",
+  "traces": {
+    "deploy": {
+      "tx_hash": "0xb10344d95c8b13d85e6b13ebdb7d94e7bc608f4606b5e55d7613b377870cb05c",
+      "actual_calldata_bytes": 8617,
+      "actual_sstore_count": 34,
+      "actual_call_count": 0,
+      "opcode_steps": 5166
+    },
+    "fund": {
+      "tx_hash": "0x3c2d980f8d2363103a53abc7a7a01632ab846ba20a6401e6d728a5a8e86dfe89",
+      "actual_calldata_bytes": 0,
+      "actual_sstore_count": 0,
+      "actual_call_count": 0,
+      "opcode_steps": 13
+    },
+    "disable_level0": {
+      "tx_hash": "0x3bcea45150efe08a8209fcebb4853600634ccc7211f76d3c69855ce93063e1e7",
+      "actual_calldata_bytes": 36,
+      "actual_sstore_count": 1,
+      "actual_call_count": 0,
+      "opcode_steps": 300
+    },
+    "disable_level1": {
+      "tx_hash": "0x8944224cf87c9e3cfe135c68862745b21c126e90e7f10809493495317a0d6a9a",
+      "actual_calldata_bytes": 36,
+      "actual_sstore_count": 1,
+      "actual_call_count": 0,
+      "opcode_steps": 300
+    },
+    "claim_level2": {
+      "tx_hash": "0xa50c5ad4a976dfa274958261c4d2226a7b0f0ca133b62b614d4248a84ed26a2a",
+      "actual_calldata_bytes": 708,
+      "actual_sstore_count": 1,
+      "actual_call_count": 1,
+      "opcode_steps": 2665
+    }
+  }
+}

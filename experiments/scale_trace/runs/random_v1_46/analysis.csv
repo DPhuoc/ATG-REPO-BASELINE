@@ -1,0 +1,10 @@
+pair,contract,levels,duplicateVector,pattern,bestClaimGas,worstClaimGas,refundGas,bestDisableGas,worstDisableGas,refundDisableGas,deployGasDecimal,okAll,notes
+"B->C|evm|fund:bc","CTLCMultipleEdges","4","2|2|4|8","multi-level+multi-option","71641","213517","184138","","124599","124599","3311072","true","pair compiles to CTLCMultipleEdges; expect 3 disable step(s) before last claim/refund"
+"C->A|evm|fund:ca","CTLCOnly","1","1","single-level","64620","64620","59561","","0","0","1100987","true","best_claim and worst_claim are expected to match; pair compiles to CTLCOnly"
+"C->D|evm|fund:cd","CTLCMultipleEdges","2","1|4","multi-level+multi-option","71641","137535","112464","","52925","52925","1768594","true","pair compiles to CTLCMultipleEdges; expect 1 disable step(s) before last claim/refund"
+"C->F|evm|fund:cf","CTLCMultipleEdges","1","2","single-level+multi-option","75948","75948","59539","","0","0","1285286","true","best_claim and worst_claim are expected to match; pair compiles to CTLCMultipleEdges"
+"D->A|evm|fund:da","CTLCOnly","1","1","single-level","64620","64620","59561","","0","0","1100975","true","best_claim and worst_claim are expected to match; pair compiles to CTLCOnly"
+"D->E|evm|fund:de","CTLCMultipleEdges","1","4","single-level+multi-option","80267","80267","59539","","0","0","1561256","true","best_claim and worst_claim are expected to match; pair compiles to CTLCMultipleEdges"
+"E->F|evm|fund:ef","CTLCMultipleEdges","1","4","single-level+multi-option","75936","75936","59539","","0","0","1469584","true","best_claim and worst_claim are expected to match; pair compiles to CTLCMultipleEdges"
+"F->G|evm|fund:fg","CTLCMultipleEdges","1","2","single-level+multi-option","71641","71641","59539","","0","0","1239450","true","best_claim and worst_claim are expected to match; pair compiles to CTLCMultipleEdges"
+"G->A|evm|fund:ga","CTLCOnly","1","1","single-level","64620","64620","59561","","0","0","1100975","true","best_claim and worst_claim are expected to match; pair compiles to CTLCOnly"
